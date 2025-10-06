@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Web Examples with Dark/Light Mode, IST Clock, and Turnstile.">
+
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="XwS-rjrSfD1VKW-gdj7jsGetN5wGnT4twxvBCSbZLpM" />
+
+  <title>Web Examples Dark/Light Mode</title>
+  <link rel="icon" type="image/jpeg" href="hello.jpg" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body class="light-mode">
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="hello.jpg" alt="Logo" class="logo" />
+        <span class="site-name">Web Examples</span>
+      </div>
+
+      <!-- Top-right: IST Clock and nav links -->
+      <div class="nav-right">
+        <div id="ist-clock" class="clock" aria-label="Current Indian Standard Time"></div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>🚀 Welcome to Web Examples</h1>
+
+    <!-- Text label above theme button -->
+    <div class="theme-label-container">
+      <p class="theme-label">Click Here to Change Theme</p>
+    </div>
+
+    <!-- Theme toggle button below text -->
+    <div class="mode-toggle-container">
+      <button class="theme-toggle" id="theme-toggle">Dark Mode</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Web Development Examples demonstrate <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.  
+      Light mode is the default, and you can switch to dark mode anytime.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="https://formspree.io/f/mdklddkp" method="POST">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <!-- Cloudflare Turnstile widget -->
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAABxSN-HoYLPqYxkN"></div><br>
+
+      <button type="submit">Submit</button>
+      <p id="form-msg" class="form-msg"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Web Examples. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
